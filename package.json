@@ -1,13 +1,21 @@
 {
-  "name": "alganews-sdk",
-  "version": "1.0.0",
+  "name": "rospiel-react_alganews-sdk",
+  "version": "2.0.0",
+  "_comment1": "SAME FOLDER FROM outDir on tsconfig.json",
   "main": "dist/index.js",
+  "_comment2": "SAME FOLDER FROM outDir on tsconfig.json ",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepublish": "npm run-script build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/uuid": "8.3.2",
+    "axios": "0.21.1",
+    "date-fns": "2.22.1",
+    "uuid": "8.3.2"
+  },
   "devDependencies": {
     "typescript": "^4.8.4"
   }
