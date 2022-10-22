@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    /* BUILD GENERATE TYPING FILES */
+    "declaration": true, 
+    /* FOLDER TO SAVE AFTER COMPILED */
+    "outDir": "dist/", 
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/"
+  ]
+}
