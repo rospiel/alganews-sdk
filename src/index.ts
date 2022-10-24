@@ -10,6 +10,8 @@ export { default as PaymentService } from './services/Payment.service';
 export { default as CashFlowService } from './services/CashFlow.service';
 export { default as generateQueryString } from './utils/generateQueryString';
 
+export * from './@types';
+
 export default {
   services, utils
 }

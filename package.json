@@ -1,6 +1,6 @@
 {
   "name": "rospiel-react_alganews-sdk",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "_comment1": "SAME FOLDER FROM outDir on tsconfig.json",
   "main": "dist/index.js",
   "_comment2": "SAME FOLDER FROM outDir on tsconfig.json ",
