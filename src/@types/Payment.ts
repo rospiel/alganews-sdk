@@ -8,4 +8,14 @@ export namespace Payment {
   export type Preview = components['PaymentPreview']
   export type PreviewInput = components['PaymentPreviewInput']
   export type Paginated = components['PaymentsPaginated']
+  export type PostWithEarnings = components['PostWithEarnings']
+
+  export type Query = {
+    payeeId?: number;
+    payeeEmail?: number;
+    scheduledToMonth?: string;
+    page?: number;
+    size?: number;
+    sort: [keyof Summary, 'asc' | 'desc'];
+  };
 }

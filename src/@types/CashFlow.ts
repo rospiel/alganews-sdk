@@ -11,4 +11,10 @@ export namespace CashFlow {
   export type EntrySummary = components['CashFlowEntrySummary']
   export type EntryDetailed = components['CashFlowEntryDetailed']
   export type EntryInput = components['CashFlowEntryInput']
+
+  export type Query = {
+    type: 'REVENUE' | 'EXPENSE';
+    yearMonth: string;
+    sort: [keyof EntrySummary, 'asc' | 'desc'];
+  };
 }
