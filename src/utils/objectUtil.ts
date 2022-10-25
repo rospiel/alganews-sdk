@@ -1,4 +1,4 @@
-export function isNull(value: any): boolean {
+export default function isNull(value: any): boolean {
   return (typeof value === 'object' && value === null) || value === undefined;
 }
 

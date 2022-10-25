@@ -9,6 +9,7 @@ export { default as PostService } from './services/Post.service';
 export { default as PaymentService } from './services/Payment.service';
 export { default as CashFlowService } from './services/CashFlow.service';
 export { default as generateQueryString } from './utils/generateQueryString';
+export { default as objectUtil } from './utils/objectUtil';
 
 export * from './@types';
 
