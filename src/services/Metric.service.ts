@@ -2,18 +2,17 @@ import { Metric } from "../@types";
 import Service from "../Service";
 
 class MetricService extends Service {
-  static readonly REQUEST_MAPPING: string =
-    "/metrics/editor";
+  static readonly REQUEST_MAPPING: string = "/metrics";
 
   static getTop3Tags() {
     return this.Http.get<Metric.EditorTagRatio>(
-      `${this.REQUEST_MAPPING}/top3-tags`
+      `${this.REQUEST_MAPPING}/editor/top3-tags`
     ).then(this.getData);
   }
 
   static getEditorMonthlyEarnings() {
     return this.Http.get<Metric.EditorMonthlyEarnings>(
-      `${this.REQUEST_MAPPING}/monthly-earnings`
+      `${this.REQUEST_MAPPING}/editor/monthly-earnings`
     ).then(this.getData);
   }
 
