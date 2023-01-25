@@ -31,20 +31,9 @@ export default function handleAxiosResponseError(error: AxiosError<ErrorData>) {
         throw new SystemError(response!.data);
       }
       default: {
-        const unknownError = "Erro desconhecido";
-
-        const errorData = {} as ErrorData;
-        errorData.detail = response!.data.detail || error.message || unknownError;
-        errorData.status = response!.status || 500;
-        errorData.userMessage = response!.data.userMessage || response!.data.detail || unknownError;
-        errorData.timestamp = response!.data.timestamp || "";
-        errorData.title = response!.data.title || unknownError;
-        errorData.type = GenericError.type
-        
-        throw new GenericError(errorData);
+        throw error;
       }
     }
-    
   }
 
   

@@ -8,10 +8,16 @@ class Service {
   protected static Http = Http;
   protected static getData = getdata;
 
-  public static setRequestConfig(onFulfilled: (
+  public static setRequestInterceptors(onFulfilled: (
     request: AxiosRequestConfig) => AxiosRequestConfig | Promise<AxiosRequestConfig>, onRejected?: (error: any) => any) {
     
     Http.interceptors.request.use(onFulfilled, onRejected);
+  }
+
+  public static setResponseInterceptors(onFulfilled: (
+    response: AxiosResponse) => AxiosResponse | Promise<AxiosResponse>, onRejected?: (error: any) => any) {
+    
+    Http.interceptors.response.use(onFulfilled, onRejected);
   }
 }
 
